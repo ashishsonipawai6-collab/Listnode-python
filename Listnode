@@ -1,0 +1,19 @@
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+n = int(input("enter the number = "))
+
+value = int(input("enter value = "))
+head = ListNode(value)
+current = head
+
+for i in range(n-1):
+    value = int(input("enter value = "))
+    new_node = ListNode(value)
+    current.next = new_node
+    current = new_node
+temp = head
+while temp:
+    print(temp.val)
+    temp = temp.next
